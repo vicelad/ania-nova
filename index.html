@@ -177,9 +177,19 @@
   video.src = video.dataset.src;
 }));
 
-      // MASONRY GALLERY
+    // SHOW AND HIDE ELEMENTS
+    function showhide(idone, idtwo) {
+         document.getElementById(idone).classList.remove('display-none');
+         document.getElementById(idtwo).classList.add('display-none');
+     }
+function hideVideoButtonAndThumbnail(button_id, thumbnail_id) {
+  document.getElementById(button_id).classList.add('display-none');
+  document.getElementById(thumbnail_id).classList.add('display-none');
+}
+
+    // MASONRY GALLERY
       
-$(window).load(function() {
+    $(window).load(function() {
 
 $(".gallery-image").click(function() {
   $(".lightbox").fadeIn(300);
@@ -200,23 +210,24 @@ $(".gallery-image").click(function() {
 
 $(".close").click(function() {
   $(".lightbox").fadeOut(300);
-  // $(".gallery-image").remove();
+  $("h1").remove();
+  $(".lightbox img").remove();
   $("html").css("overflow", "auto");
 });
 
 $(document).keyup(function(e) {
   if (e.keyCode == 27) {
     $(".lightbox").fadeOut(300);
-    $(".gallery-image").remove();
+    $(".lightbox img").remove();
     $("html").css("overflow", "auto");
   }
 });
 
 $(".arrowr").click(function() {
-  var imgSrc = $(".gallery-image").attr("src");
+  var imgSrc = $(".lightbox img").attr("src");
   var search = $("#gallery").find("img[src$='" + imgSrc + "']");
   var newImage = search.next().attr("src");
-  $("gallery-image").attr("src", newImage);
+  $(".lightbox img").attr("src", newImage);
   $(".filter").css("background-image", "url(" + newImage + ")");
 
   if (!search.next().is(":last-child")) {
@@ -227,10 +238,10 @@ $(".arrowr").click(function() {
 });
 
 $(".arrowl").click(function() {
-  var imgSrc = $(".gallery-image").attr("src");
+  var imgSrc = $(".lightbox img").attr("src");
   var search = $("#gallery").find("img[src$='" + imgSrc + "']");
   var newImage = search.prev().attr("src");
-  $(".gallery-image").attr("src", newImage);
+  $(".lightbox img").attr("src", newImage);
   $(".filter").css("background-image", "url(" + newImage + ")");
 
   if (!search.prev().is(":first-child")) {
@@ -242,14 +253,6 @@ $(".arrowl").click(function() {
 
 });
 
-function showhide(idone, idtwo) {
-         document.getElementById(idone).classList.remove('display-none');
-         document.getElementById(idtwo).classList.add('display-none');
-     }
-function hideVideoButtonAndThumbnail(button_id, thumbnail_id) {
-  document.getElementById(button_id).classList.add('display-none');
-  document.getElementById(thumbnail_id).classList.add('display-none');
-}
     </script>
     
   </body>

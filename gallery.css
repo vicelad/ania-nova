@@ -15,7 +15,7 @@
   height: 100%;
   top: 0;
   display: none;
-  background: rgba(0,0,0,0.9);
+  background: #7f8c8d;
   perspective: 1000;
   z-index: 3;
 }
