@@ -406,8 +406,8 @@ textarea:focus {
     object-fit: cover;
     position: absolute;
   }
-  :is(vimeo-embed, youtube-embed) iframe:not([src=""]) + button {
+  /* :is(vimeo-embed, youtube-embed) iframe:not([src=""]) + button {
     display: none;
-  }
+  } */
   :is(vimeo-embed button) { --button-bgc: rgba(68, 35, 232, 0.1) } /* #00adef */
   :is(vimeo-embed, youtube-embed):hover button { --button-op: 1; }
