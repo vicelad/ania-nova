@@ -14,15 +14,35 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <title>Ania Nova</title>
-  </head>
 
-  <style>
-    @media (max-width: 768px) {
-      .gallery-container {
-        grid-template-columns: repeat(1, 1fr); /* Stack images vertically on mobile */
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
       }
-    }
+
+      .filmography {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr); /* 5 columns on desktop */
+          gap: 10px; /* Space between images */
+          padding: 20px;
+      }
+
+      .filmography img {
+          width: 100%; /* Full width of the grid cell */
+          height: auto; /* Maintain aspect ratio */
+      }
+
+      /* Mobile styles */
+      @media (max-width: 768px) {
+          .filmography {
+              grid-template-columns: 1fr; /* 1 column on mobile */
+          }
+      }
   </style>
+
+  </head>
 
   <body>
     <main>
@@ -80,22 +100,48 @@
 
       <section id="filmography">
         <h2>Filmography</h2>
-        <div class="horizontal-divider">
-          <a class="poster--a" href="https://www.imdb.com/title/tt16303630" target="_blank"><img class="poster--img" src="./static/IMDB_posters/01%20Headhunters.jpg" alt="" /></a>
-          <a class="poster--a" href="https://www.imdb.com/title/tt7875794" target="_blank"><img class="poster--img" src="./static/IMDB_posters/02%20Wisting.jpg" alt="" /></a>
-          <a class="poster--a" href="https://www.imdb.com/title/tt7556502" target="_blank"><img class="poster--img" src="./static/IMDB_posters/03%20A%20Brixton%20Tale.jpg" alt="" /></a>
-          <a class="poster--a" href="https://www.imdb.com/title/tt5715066" target="_blank"><img class="poster--img" src="./static/IMDB_posters/04%20Mortal.jpg" alt="" /></a>
-          <a class="poster--a" href="https://www.imdb.com/title/tt9715964" target="_blank"><img class="poster--img" src="./static/IMDB_posters/05%20Deny.jpg" alt="" /></a>
+        <div class="horizontal-divider grid-container">
+          <a class="poster--a" href="https://imdb.com/title/tt15835240" target="_blank">
+            <img class="poster--img" src="./static/IMDB_posters/01 Panic attacks.jpg" alt="" />
+          </a>
+          <a class="poster--a" href="https://imdb.com/title/tt16303630" target="_blank">
+            <img class="poster--img" src="./static/IMDB_posters/01 Headhunters.jpg" alt="" />
+          </a>
+          <a class="poster--a" href="https://imdb.com/title/tt7875794" target="_blank">
+            <img class="poster--img" src="./static/IMDB_posters/02%20Wisting.jpg" alt="" />
+          </a>
+          <a class="poster--a" href="https://imdb.com/title/tt5715066" target="_blank">
+            <img class="poster--img" src="./static/IMDB_posters/04%20Mortal.jpg" alt="" />
+          </a>
+          <a class="poster--a" href="https://imdb.com/title/tt9715964" target="_blank">
+            <img class="poster--img" src="./static/IMDB_posters/05%20Deny.jpg" alt="" />
+          </a>
+
         </div>
-        <p id="toggle" class="one"><a href="javascript:showhide('hide-me', 'toggle')">View more</a></p>
-        <div class="horizontal-divider display-none" id="hide-me">
-          <a class="poster--a" href="https://www.imdb.com/title/tt4192998" target="_blank"><img class="poster--img" src="./static/IMDB_posters/06%20Okkupert.jpg" alt="" /></a>
-          <a class="poster--a" href="https://www.imdb.com/title/tt13397550" target="_blank"><img class="poster--img" src="./static/IMDB_posters/07%20Hate%20Speech.jpg" alt="" /></a>
-          <a class="poster--a" href="https://www.imdb.com/title/tt7510948" target="_blank"><img class="poster--img" src="./static/IMDB_posters/08%20Melk.jpg" alt="" /></a>
-          <a class="poster--a" href="https://www.imdb.com/title/tt8201154" target="_blank"><img class="poster--img" src="./static/IMDB_posters/09%20Special%20Delivery.jpg" alt="" /></a>
-          <a class="poster--a" href="https://www.imdb.com/title/tt11131110" target="_blank"><img class="poster--img" src="./static/IMDB_posters/10%20Culture.jpg" alt="" /></a>
+      
+        <div class="horizontal-divider grid-container display-none" id="hide-me">
+          <a class="poster--a" href="https://www.imdb.com/title/tt4192998" target="_blank">
+            <img class="poster--img" src="./static/IMDB_posters/06%20Okkupert.jpg" alt="" />
+          </a>
+          <a class="poster--a" href="https://www.imdb.com/title/tt13397550" target="_blank">
+            <img class="poster--img" src="./static/IMDB_posters/07%20Hate%20Speech.jpg" alt="" />
+          </a>
+          <a class="poster--a" href="https://www.imdb.com/title/tt7510948" target="_blank">
+            <img class="poster--img" src="./static/IMDB_posters/08%20Melk.jpg" alt="" />
+          </a>
+          <a class="poster--a" href="https://www.imdb.com/title/tt8201154" target="_blank">
+            <img class="poster--img" src="./static/IMDB_posters/09%20Special%20Delivery.jpg" alt="" />
+          </a>
+          <a class="poster--a" href="https://www.imdb.com/title/tt11131110" target="_blank">
+            <img class="poster--img" src="./static/IMDB_posters/10%20Culture.jpg" alt="" />
+          </a>
         </div>
+      
+        <p id="toggle"><a href="#" onclick="showhide('hide-me', 'toggle', event)">View more</a></p>
       </section>
+      
+    
+    
 
       <section>
         <h2>Gallery</h2>
@@ -167,6 +213,9 @@
             <a href="https://youtu.be/ALDCPjLMymM?si=YzaLNOAe88WXepnW" target="_blank">
               <img src="./static/press/press - 9.jpg" alt="Press Image 9" />
             </a>
+            <a href="https://apple.news/AExZWTBQUTXGRro47r0AOOw" target="_blank">
+              <img src="./static/press/press - 0.jpg" alt="Press Image 0" />
+            </a>
           </div>
           <div class="column">
             <a href="https://medium.com/@ragugini-francis/interview-with-actress-ania-nova-132566e0c3d3" target="_blank">
@@ -226,14 +275,20 @@
       );
 
       // SHOW AND HIDE ELEMENTS
-      function showhide(idone, idtwo) {
-        document.getElementById(idone).classList.remove("display-none");
-        document.getElementById(idtwo).classList.add("display-none");
-      }
-      function hideVideoButtonAndThumbnail(button_id, thumbnail_id) {
-        document.getElementById(button_id).classList.add("display-none");
-        document.getElementById(thumbnail_id).classList.add("display-none");
-      }
+      function showhide(idone, idtwo, event) {
+    event.preventDefault(); // Prevent default anchor click behavior
+    const hideMe = document.getElementById(idone);
+    const toggle = document.getElementById(idtwo);
+    
+    if (hideMe.classList.contains("display-none")) {
+        hideMe.classList.remove("display-none");
+        toggle.innerHTML = 'View less'; // Change link text
+    } else {
+        hideMe.classList.add("display-none");
+        toggle.innerHTML = 'View more'; // Change link text back
+    }
+}
+
 
       // MASONRY GALLERY
 
