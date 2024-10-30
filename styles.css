@@ -439,7 +439,7 @@ img {
 }
 
 .gallery-container img {
-  width: 100%;
-  height: auto; /* Maintain aspect ratio for only gallery images */
-  object-fit: contain;
+  height: auto;
+  max-width: 100%; /* Ensures the image doesn’t exceed the container width */
+  object-fit: cover; /* Or any other value that achieves your desired effect */
 }
