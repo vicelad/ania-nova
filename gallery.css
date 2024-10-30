@@ -39,6 +39,7 @@
   max-width: calc(95vw - 100px);
   transition: 0.8s cubic-bezier(0.7, 0, 0.4, 1);
   transform-style: preserve-3d;
+  object-fit: contain;
 }
 
 [class^="arrow"] {
