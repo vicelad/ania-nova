@@ -437,3 +437,9 @@ img {
   width: 100%;
   display: block;
 }
+
+.gallery-container img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio for only gallery images */
+  object-fit: contain;
+}
