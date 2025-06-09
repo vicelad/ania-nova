@@ -188,8 +188,6 @@ textarea {
   width: 100%;
 }
 
-/* BUTTONS START */
-
 button {
   border: 2px solid var(--color-primary);
   padding: 1rem 2rem;
@@ -339,10 +337,7 @@ textarea:focus {
     width: 2rem;
     color: var(--color-primary) !important;
   }
-  /* .horizontal-divider-for-footer-icons {
-        width: 20%;
-        justify-content: center;
-    } */
+
   .topnav a {
     display: none;
   }
@@ -407,14 +402,19 @@ textarea:focus {
   object-fit: cover;
   position: absolute;
 }
-/* :is(vimeo-embed, youtube-embed) iframe:not([src=""]) + button {
-    display: none;
-  } */
 :is(vimeo-embed button) {
   --button-bgc: rgba(68, 35, 232, 0.1);
 } /* #00adef */
 :is(vimeo-embed, youtube-embed):hover button {
   --button-op: 1;
+}
+
+:is(vimeo-embed, youtube-embed) button.hide-video-ui {
+  display: none !important;
+}
+:is(vimeo-embed, youtube-embed) img.hide-video-ui,
+:is(youtube-embed) img.hide-video-ui {
+  display: none !important;
 }
 
 .press-gallery {
@@ -424,13 +424,13 @@ textarea:focus {
 
 .gallery-container {
   display: flex;
-  gap: 10px; /* Adjusts the spacing between columns */
+  gap: 10px;
 }
 
 .column {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Adjusts the spacing between images in the same column */
+  gap: 10px;
 }
 
 img {
@@ -440,6 +440,6 @@ img {
 
 .gallery-container img {
   height: auto;
-  max-width: 100%; /* Ensures the image doesn’t exceed the container width */
-  object-fit: cover; /* Or any other value that achieves your desired effect */
+  max-width: 100%;
+  object-fit: cover;
 }

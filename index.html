@@ -94,7 +94,7 @@
         <vimeo-embed class="yt-video-sizing">
           <img id="vthum-showreel" loading="lazy" src="https://vumbnail.com/894438444.jpg" alt="Video Description" />
           <iframe allowfullscreen data-src="https://player.vimeo.com/video/939138872?autoplay=1" title=""></iframe>
-          <button id="vbtn-showreel" class="btn--video" aria-label="Play video" onclick="javascript:hideVideoButtonAndThumbnail('vbtn-showreel', 'vthum-showreel')"></button>
+          <button id="vbtn-showreel" class="btn--video" aria-label="Play video" onclick="hideVideoButtonAndThumbnail('vbtn-showreel', 'vthum-showreel')"></button>
         </vimeo-embed>
       </section>
 
@@ -172,24 +172,24 @@
           <youtube-embed class="yt-video-sizing">
             <img id="vthum-1" loading="lazy" src="https://vumbnail.com/YBgS_RrrnTM.jpg" alt="Video Description" />
             <iframe allowfullscreen data-src="https://www.youtube.com/embed/YBgS_RrrnTM?autoplay=1" title=""></iframe>
-            <button id="vbtn-1" class="btn--video" aria-label="Play video" onclick="javascript:hideVideoButtonAndThumbnail('vbtn-1', 'vthum-1')"></button>
+            <button id="vbtn-1" class="btn--video" aria-label="Play video" onclick="hideVideoButtonAndThumbnail('vbtn-1', 'vthum-1')"></button>
           </youtube-embed>
           <youtube-embed class="yt-video-sizing">
             <img id="vthum-2" loading="lazy" src="https://vumbnail.com/5BO6UdoUidI.jpg" alt="Video Description" />
             <iframe allowfullscreen data-src="https://www.youtube.com/embed/5BO6UdoUidI?autoplay=1" title=""></iframe>
-            <button id="vbtn-2" class="btn--video" aria-label="Play video" onclick="javascript:hideVideoButtonAndThumbnail('vbtn-2', 'vthum-2')"></button>
+            <button id="vbtn-2" class="btn--video" aria-label="Play video" onclick="hideVideoButtonAndThumbnail('vbtn-2', 'vthum-2')"></button>
           </youtube-embed>
         </div>
         <div class="horizontal-divider">
           <youtube-embed class="yt-video-sizing">
             <img id="vthum-3" loading="lazy" src="https://vumbnail.com/aD2Xcx1De3Y.jpg" alt="Video Description" />
             <iframe allowfullscreen data-src="https://www.youtube.com/embed/aD2Xcx1De3Y?autoplay=1" title=""></iframe>
-            <button id="vbtn-3" class="btn--video" aria-label="Play video" onclick="javascript:hideVideoButtonAndThumbnail('vbtn-3', 'vthum-3')"></button>
+            <button id="vbtn-3" class="btn--video" aria-label="Play video" onclick="hideVideoButtonAndThumbnail('vbtn-3', 'vthum-3')"></button>
           </youtube-embed>
           <vimeo-embed class="yt-video-sizing">
             <img id="vthum-4" loading="lazy" src="https://vumbnail.com/377251531.jpg" alt="Video Description" />
             <iframe allowfullscreen data-src="https://player.vimeo.com/video/377251531?autoplay=1" title=""></iframe>
-            <button id="vbtn-4" class="btn--video" aria-label="Play video" onclick="javascript:hideVideoButtonAndThumbnail('vbtn-4', 'vthum-4')"></button>
+            <button id="vbtn-4" class="btn--video" aria-label="Play video" onclick="hideVideoButtonAndThumbnail('vbtn-4', 'vthum-4')"></button>
           </vimeo-embed>
         </div>
       </section>
@@ -271,8 +271,29 @@
         button.addEventListener("click", () => {
           const video = button.previousElementSibling;
           video.src = video.dataset.src;
+          // Hide the button and the thumbnail image
+          button.classList.add('hide-video-ui');
+          const img = video.previousElementSibling;
+          if (img && img.tagName === 'IMG') {
+            img.classList.add('hide-video-ui');
+          }
         })
       );
+
+      // Fix for inline onclick handlers
+      function hideVideoButtonAndThumbnail(btnId, imgId) {
+        var btn = document.getElementById(btnId);
+        var img = document.getElementById(imgId);
+        if (btn) btn.classList.add('hide-video-ui');
+        if (img) img.classList.add('hide-video-ui');
+        // Set iframe src to start playback
+        if (btn) {
+          var iframe = btn.previousElementSibling;
+          if (iframe && iframe.tagName === 'IFRAME' && iframe.dataset.src) {
+            iframe.src = iframe.dataset.src;
+          }
+        }
+      }
 
       // SHOW AND HIDE ELEMENTS
       function showhide(idone, idtwo, event) {
