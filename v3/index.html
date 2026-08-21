@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="International award-winning actress graduated from MetFilm School London, known for Hysteria (2023), Headhunters (2022), Wisting (2021) ..." />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0e0c0b" />
+    <link rel="stylesheet" href="../normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet" />
+    <title>Ania Nova</title>
+
+    <script>document.documentElement.classList.add("js");</script>
+  </head>
+
+  <body>
+    <main>
+      <div class="header-outer">
+        <div class="topnav-960-container">
+          <div class="topnav" id="myTopnav">
+            <a href="#showreel">SHOWREEL</a>
+            <a href="#filmography">FILMOGRAPHY</a>
+            <a href="#gallery">GALLERY</a>
+            <a href="#videos">VIDEOS</a>
+            <a href="#press">PRESS</a>
+            <a href="#contact">CONTACT</a>
+            <a href="javascript:void(0);" class="icon" onclick="toggleNav()">&#9776;</a>
+          </div>
+        </div>
+      </div>
+
+      <section id="hero">
+        <div class="hero-screen">
+          <div class="hero-mask hero-mask--top"></div>
+          <div class="hero-mask hero-mask--bottom"></div>
+          <picture>
+            <source type="image/webp" srcset="../static/hero/ania-nova-hero-911.webp 1x, ../static/hero/ania-nova-hero-1356.webp 1.5x, ../static/hero/ania-nova-hero-1706.webp 2x" />
+            <img class="hero-image" src="../static/hero/ania-nova-hero-911.webp" alt="" />
+          </picture>
+        </div>
+        <div class="hero-card">
+          <h1>ANIA NOVA</h1>
+          <p class="hero-tagline">International actress</p>
+          <div class="hero-ctas">
+            <a class="btn-cv" href="../static/Ania%20Nova%20CV.pdf" target="_blank">View full CV</a>
+            <div class="hero-icons">
+              <a href="https://www.imdb.com/name/nm7837597/" target="_blank" aria-label="IMDb profile"><img src="../static/imdb.svg" alt="IMDb" /><span>IMDb</span></a>
+              <a href="https://www.instagram.com/ania__nova/" target="_blank" aria-label="Instagram profile"><img src="../static/instagram.svg" alt="Instagram" /><span>Instagram</span></a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section id="showreel" data-reveal>
+        <div class="container container--wide">
+          <h2>Showreel</h2>
+
+          <vimeo-embed class="video-embed">
+            <img id="vthum-showreel" loading="lazy" src="https://vumbnail.com/894438444.jpg" alt="Video Description" />
+            <iframe allowfullscreen data-src="https://player.vimeo.com/video/939138872?autoplay=1" title="Ania Nova showreel"></iframe>
+            <button id="vbtn-showreel" class="btn--video" aria-label="Play video" onclick="hideVideoButtonAndThumbnail('vbtn-showreel', 'vthum-showreel')"></button>
+          </vimeo-embed>
+        </div>
+      </section>
+
+      <section id="filmography" data-reveal>
+        <div class="container">
+          <h2>Filmography</h2>
+          <div class="posters-grid">
+            <a class="poster--a" style="--i:0" href="https://imdb.com/title/tt15835240" target="_blank">
+              <img class="poster--img" src="../static/IMDB_posters/01 Panic attacks.jpg" alt="" />
+            </a>
+            <a class="poster--a" style="--i:1" href="https://imdb.com/title/tt16303630" target="_blank">
+              <img class="poster--img" src="../static/IMDB_posters/01 Headhunters.jpg" alt="" />
+            </a>
+            <a class="poster--a" style="--i:2" href="https://imdb.com/title/tt7875794" target="_blank">
+              <img class="poster--img" src="../static/IMDB_posters/02%20Wisting.jpg" alt="" />
+            </a>
+            <a class="poster--a" style="--i:3" href="https://imdb.com/title/tt5715066" target="_blank">
+              <img class="poster--img" src="../static/IMDB_posters/04%20Mortal.jpg" alt="" />
+            </a>
+            <a class="poster--a" style="--i:4" href="https://imdb.com/title/tt9715964" target="_blank">
+              <img class="poster--img" src="../static/IMDB_posters/05%20Deny.jpg" alt="" />
+            </a>
+          </div>
+
+          <div class="posters-grid display-none" id="hide-me">
+            <a class="poster--a" style="--i:5" href="https://www.imdb.com/title/tt4192998" target="_blank">
+              <img class="poster--img" src="../static/IMDB_posters/06%20Okkupert.jpg" alt="" />
+            </a>
+            <a class="poster--a" style="--i:6" href="https://www.imdb.com/title/tt13397550" target="_blank">
+              <img class="poster--img" src="../static/IMDB_posters/07%20Hate%20Speech.jpg" alt="" />
+            </a>
+            <a class="poster--a" style="--i:7" href="https://www.imdb.com/title/tt7510948" target="_blank">
+              <img class="poster--img" src="../static/IMDB_posters/08%20Melk.jpg" alt="" />
+            </a>
+            <a class="poster--a" style="--i:8" href="https://www.imdb.com/title/tt8201154" target="_blank">
+              <img class="poster--img" src="../static/IMDB_posters/09%20Special%20Delivery.jpg" alt="" />
+            </a>
+            <a class="poster--a" style="--i:9" href="https://www.imdb.com/title/tt11131110" target="_blank">
+              <img class="poster--img" src="../static/IMDB_posters/10%20Culture.jpg" alt="" />
+            </a>
+          </div>
+
+          <p id="toggle"><a href="#" onclick="toggleFilmography('hide-me', 'toggle', event)">View more</a></p>
+        </div>
+      </section>
+
+      <section id="gallery" data-reveal>
+        <div class="container">
+          <h2>Gallery</h2>
+          <div id="gallery-grid">
+            <img class="gallery-image" style="--i:0" loading="lazy" src="../static/gallery_photos/Ania%20Nova%20gallery%2001.webp" alt="Ania Nova gallery photo 1" />
+            <img class="gallery-image" style="--i:1" loading="lazy" src="../static/gallery_photos/Ania%20Nova%20gallery%2002.webp" alt="Ania Nova gallery photo 2" />
+            <img class="gallery-image" style="--i:2" loading="lazy" src="../static/gallery_photos/Ania%20Nova%20gallery%2003.webp" alt="Ania Nova gallery photo 3" />
+            <img class="gallery-image" style="--i:3" loading="lazy" src="../static/gallery_photos/Ania%20Nova%20gallery%2004.webp" alt="Ania Nova gallery photo 4" />
+            <img class="gallery-image" style="--i:4" loading="lazy" src="../static/gallery_photos/Ania%20Nova%20gallery%2005.webp" alt="Ania Nova gallery photo 5" />
+            <img class="gallery-image" style="--i:5" loading="lazy" src="../static/gallery_photos/Ania%20Nova%20gallery%2006.webp" alt="Ania Nova gallery photo 6" />
+            <img class="gallery-image" style="--i:6" loading="lazy" src="../static/gallery_photos/Ania%20Nova%20gallery%2007.webp" alt="Ania Nova gallery photo 7" />
+            <img class="gallery-image" style="--i:7" loading="lazy" src="../static/gallery_photos/Ania%20Nova%20gallery%2008.webp" alt="Ania Nova gallery photo 8" />
+            <img class="gallery-image" style="--i:8" loading="lazy" src="../static/gallery_photos/Ania%20Nova%20gallery%2009.webp" alt="Ania Nova gallery photo 9" />
+            <img class="gallery-image" style="--i:9" loading="lazy" src="../static/gallery_photos/Ania%20Nova%20gallery%2010.webp" alt="Ania Nova gallery photo 10" />
+            <img class="gallery-image" style="--i:10" loading="lazy" src="../static/gallery_photos/Ania%20Nova%20gallery%2011.webp" alt="Ania Nova gallery photo 11" />
+          </div>
+        </div>
+        <div class="lightbox">
+          <div class="filter"></div>
+          <button class="arrowr" aria-label="Next photo"></button>
+          <button class="arrowl" aria-label="Previous photo"></button>
+          <button class="close" aria-label="Close gallery"></button>
+        </div>
+      </section>
+
+      <section id="videos" data-reveal>
+        <div class="container">
+          <h2>Videos</h2>
+          <div class="videos-row">
+            <youtube-embed class="video-embed">
+              <img id="vthum-1" loading="lazy" src="https://vumbnail.com/YBgS_RrrnTM.jpg" alt="Video Description" />
+              <iframe allowfullscreen data-src="https://www.youtube.com/embed/YBgS_RrrnTM?autoplay=1" title="Ania Nova interview"></iframe>
+              <button id="vbtn-1" class="btn--video" aria-label="Play video" onclick="hideVideoButtonAndThumbnail('vbtn-1', 'vthum-1')"></button>
+            </youtube-embed>
+            <youtube-embed class="video-embed">
+              <img id="vthum-2" loading="lazy" src="https://vumbnail.com/tJCIrA6wnP8.jpg" alt="Video Description" />
+              <iframe allowfullscreen data-src="https://www.youtube.com/embed/tJCIrA6wnP8?autoplay=1" title="Ania Nova scene"></iframe>
+              <button id="vbtn-2" class="btn--video" aria-label="Play video" onclick="hideVideoButtonAndThumbnail('vbtn-2', 'vthum-2')"></button>
+            </youtube-embed>
+          </div>
+          <div class="videos-row">
+            <youtube-embed class="video-embed">
+              <img id="vthum-3" loading="lazy" src="https://vumbnail.com/aD2Xcx1De3Y.jpg" alt="Video Description" />
+              <iframe allowfullscreen data-src="https://www.youtube.com/embed/aD2Xcx1De3Y?autoplay=1" title="Ania Nova feature"></iframe>
+              <button id="vbtn-3" class="btn--video" aria-label="Play video" onclick="hideVideoButtonAndThumbnail('vbtn-3', 'vthum-3')"></button>
+            </youtube-embed>
+            <vimeo-embed class="video-embed">
+              <img id="vthum-4" loading="lazy" src="https://vumbnail.com/377251531.jpg" alt="Video Description" />
+              <iframe allowfullscreen data-src="https://player.vimeo.com/video/377251531?autoplay=1" title="Ania Nova short film"></iframe>
+              <button id="vbtn-4" class="btn--video" aria-label="Play video" onclick="hideVideoButtonAndThumbnail('vbtn-4', 'vthum-4')"></button>
+            </vimeo-embed>
+          </div>
+        </div>
+      </section>
+
+      <section id="press" data-reveal>
+        <div class="container">
+          <h2>Press</h2>
+          <p class="pull-quote">International award-winning actress, graduated from MetFilm School London</p>
+          <div class="press-grid">
+            <a class="press-card" style="--i:0" href="https://apple.news/AExZWTBQUTXGRro47r0AOOw" target="_blank">
+              <img loading="lazy" src="../static/press/press - 1.jpg" alt="Press clipping — Apple News feature" />
+            </a>
+            <a class="press-card" style="--i:1" href="https://medium.com/@ragugini-francis/interview-with-actress-ania-nova-132566e0c3d3" target="_blank">
+              <img loading="lazy" src="../static/press/press - 2.jpg" alt="Press clipping — Medium interview" />
+            </a>
+            <a class="press-card" style="--i:2" href="https://universalcinema.ca/deny-everything-review-of-alioune-binates-short-deny" target="_blank">
+              <img loading="lazy" src="../static/press/press - 3.jpg" alt="Press clipping — Universal Cinema review" />
+            </a>
+            <a class="press-card" style="--i:3" href="https://youtu.be/hZvH9u98zgw?si=ymjQbpvPQ9-geVkL" target="_blank">
+              <img loading="lazy" src="../static/press/press - 4.jpg" alt="Press clipping — YouTube interview" />
+            </a>
+            <a class="press-card" style="--i:4" href="https://www.dailybloid.com/news/interview-with-actress-ania-nova-new-movie" target="_blank">
+              <img loading="lazy" src="../static/press/press - 5.jpg" alt="Press clipping — Dailybloid interview" />
+            </a>
+            <a class="press-card" style="--i:5" href="https://apple.news/AExZWTBQUTXGRro47r0AOOw" target="_blank">
+              <img loading="lazy" src="../static/press/press - 6.jpg" alt="Press clipping — Apple News feature" />
+            </a>
+            <a class="press-card" style="--i:6" href="https://www.instagram.com/p/C7FEp3TJ0QE/?hl=en" target="_blank">
+              <img loading="lazy" src="../static/press/press - 7.jpg" alt="Press clipping — Instagram post" />
+            </a>
+            <a class="press-card" style="--i:7" href="https://www.instagram.com/p/C7FEp3TJ0QE/?hl=en" target="_blank">
+              <img loading="lazy" src="../static/press/press - 8.jpg" alt="Press clipping — Instagram post" />
+            </a>
+            <a class="press-card" style="--i:8" href="https://youtu.be/ALDCPjLMymM?si=YzaLNOAe88WXepnW" target="_blank">
+              <img loading="lazy" src="../static/press/press - 9.jpg" alt="Press clipping — YouTube feature" />
+            </a>
+            <a class="press-card" style="--i:9" href="https://open.spotify.com/episode/42BMWOS7iEh6ePdpEwfuPN" target="_blank">
+              <img loading="lazy" src="../static/press/press - 10.jpg" alt="Press clipping — Spotify podcast episode" />
+            </a>
+            <a class="press-card" style="--i:10" href="https://apple.news/AExZWTBQUTXGRro47r0AOOw" target="_blank">
+              <img loading="lazy" src="../static/press/press - 0.jpg" alt="Press clipping — Apple News feature" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" data-reveal>
+        <h2>Contact</h2>
+        <p><a href="https://www.whiteflamingo.agency/actors/ania-nova" target="_blank">Represented by White Flamingo</a></p>
+        <p><a href="mailto:hi@whiteflamingo.agency">hi@whiteflamingo.agency</a></p>
+      </section>
+
+      <footer>
+        <div class="footer-inner">
+          <div class="links-row">
+            <a class="footer-text" href="https://www.spotlight.com/0011-4532-8639" target="_blank">Spotlight</a>
+            <a class="footer-text" href="https://www.filmmakers.eu/actors/ania-nova" target="_blank">Filmmakers</a>
+            <a class="footer-text" href="https://casting.filmtoolz.ru/3342917" target="_blank">Filmtoolz</a>
+            <a class="footer-text" href="https://resumes.actorsaccess.com/ania-nova" target="_blank">Actors Access</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      // NAV HEIGHT -> CSS var (used for scroll offsets and hero sizing)
+      var headerOuter = document.querySelector(".header-outer");
+      function updateNav() {
+        document.documentElement.style.setProperty("--nav-h", headerOuter.offsetHeight + "px");
+      }
+      updateNav();
+      window.addEventListener("resize", updateNav);
+      window.addEventListener("load", updateNav);
+
+      // FADE-UP ON SCROLL
+      if ("IntersectionObserver" in window) {
+        var revealObserver = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12 }
+        );
+        document.querySelectorAll("[data-reveal]").forEach(function (el) {
+          revealObserver.observe(el);
+        });
+      } else {
+        document.querySelectorAll("[data-reveal]").forEach(function (el) {
+          el.classList.add("in-view");
+        });
+      }
+
+      // MOBILE TOPNAV
+      function toggleNav() {
+        document.getElementById("myTopnav").classList.toggle("responsive");
+      }
+
+      // VIDEO LAZY LOAD (inline onclick handler)
+      function hideVideoButtonAndThumbnail(btnId, imgId) {
+        var btn = document.getElementById(btnId);
+        var img = document.getElementById(imgId);
+        if (btn) {
+          var iframe = btn.previousElementSibling;
+          if (iframe && iframe.tagName === "IFRAME" && iframe.dataset.src) {
+            iframe.src = iframe.dataset.src;
+          }
+          btn.classList.add("hide-video-ui");
+        }
+        if (img) img.classList.add("hide-video-ui");
+      }
+
+      // SHOW AND HIDE FILMOGRAPHY ROW
+      function toggleFilmography(filmographyId, toggleId, event) {
+        event.preventDefault();
+        var hideMe = document.getElementById(filmographyId);
+        var toggle = document.getElementById(toggleId);
+        if (hideMe.classList.contains("display-none")) {
+          hideMe.classList.remove("display-none");
+          toggle.innerHTML = 'View less';
+        } else {
+          hideMe.classList.add("display-none");
+          toggle.innerHTML = 'View more';
+        }
+      }
+
+      // GALLERY LIGHTBOX (vanilla, no dependencies)
+      (function () {
+        var grid = document.getElementById("gallery-grid");
+        var lightbox = document.querySelector(".lightbox");
+        if (!grid || !lightbox) return;
+
+        var images = Array.prototype.slice.call(grid.querySelectorAll("img"));
+        var backdrop = lightbox.querySelector(".filter");
+        var arrowR = lightbox.querySelector(".arrowr");
+        var arrowL = lightbox.querySelector(".arrowl");
+        var closeBtn = lightbox.querySelector(".close");
+
+        var stage = document.createElement("img");
+        stage.alt = "";
+        lightbox.insertBefore(stage, arrowR);
+
+        var index = 0;
+
+        function render() {
+          var thumb = images[index];
+          stage.src = thumb.currentSrc || thumb.src;
+          stage.alt = thumb.alt;
+          backdrop.style.backgroundImage = 'url("' + stage.src + '")';
+        }
+
+        function open(indexToShow) {
+          index = indexToShow;
+          render();
+          lightbox.classList.add("open");
+          document.documentElement.style.overflow = "hidden";
+          closeBtn.focus();
+        }
+
+        function close() {
+          lightbox.classList.remove("open");
+          document.documentElement.style.overflow = "";
+        }
+
+        function next() {
+          index = (index + 1) % images.length;
+          render();
+        }
+
+        function prev() {
+          index = (index - 1 + images.length) % images.length;
+          render();
+        }
+
+        images.forEach(function (img, i) {
+          img.addEventListener("click", function () {
+            open(i);
+          });
+        });
+        arrowR.addEventListener("click", next);
+        arrowL.addEventListener("click", prev);
+        closeBtn.addEventListener("click", close);
+        backdrop.addEventListener("click", close);
+
+        document.addEventListener("keydown", function (e) {
+          if (!lightbox.classList.contains("open")) return;
+          if (e.key === "Escape") close();
+          else if (e.key === "ArrowRight") next();
+          else if (e.key === "ArrowLeft") prev();
+        });
+      })();
+    </script>
+  </body>
+</html>
